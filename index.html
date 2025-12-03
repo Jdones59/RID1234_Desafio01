@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Arquitetura Moderna — Landing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1 class="logo">Arquitetura Moderna</h1>
+      </div>
+
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="#sobre">Sobre</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <button class="menu-btn" aria-label="Abrir menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO-->
+    <section class="hero" id="home" aria-label="Hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h2>Construímos espaços que inspiram</h2>
+          <p>Projetos arquitetônicos modernos, funcionais e totalmente personalizados — do conceito à entrega.</p>
+          <a class="btn" href="#contato">Solicitar Orçamento</a>
+        </div>
+
+        <figure class="hero-image-box" aria-hidden="false">
+          <img src="casa1.png" alt="Projeto 1" class="hero-slide active">
+          <img src="loja.png" alt="Projeto 2" class="hero-slide">
+          <img src="hero.png" alt="Projeto 3" class="hero-slide">
+          <img src="mansao1.png" alt="Projeto 4" class="hero-slide">
+          <img src="mansaobranca.png" alt="Projeto 5" class="hero-slide">
+          <img src="mansaopreta.png" alt="Projeto 6" class="hero-slide">
+        </figure>
+      </div>
+    </section>
+
+    <section id="sobre" class="sobre">
+      <div class="container sobre-inner">
+        <div class="sobre-text">
+          <h2>Sobre Nós</h2>
+          <p>Estúdio de arquitetura com foco em soluções contemporâneas e funcionais. Aliamos técnica e estética para entregar projetos que valorizam o cotidiano.</p>
+        </div>
+        <figure class="sobre-figure" aria-hidden="true">
+          <img src="sobre.png" alt="Ilustração sobre a empresa">
+        </figure>
+      </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+      <div class="container">
+        <h2>Projetos Recentes</h2>
+        <div class="grid-projetos" role="list">
+          <article class="card-projeto" role="listitem">
+            <img src="casasimples.png" alt="Projeto Residência Minimalista">
+            <h3>Residência Minimalista</h3>
+          </article>
+          <article class="card-projeto" role="listitem">
+            <img src="loja.png" alt="Loft Urbano">
+            <h3>Loft Urbano</h3>
+          </article>
+          <article class="card-projeto" role="listitem">
+            <img src="sala.png" alt="Espaço Comercial">
+            <h3>Espaço Comercial</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="contato">
+      <div class="container">
+        <h2>Entre em Contato</h2>
+        <p>Preencha e envie — as informações chegarão direto na sua planilha via SheetMonkey.</p>
+
+        <form id="formContato" action="https://api.sheetmonkey.io/form/SEU_LINK_AQUI" method="POST" novalidate>
+          <label class="sr-only">Nome<input type="text" name="nome" placeholder="Seu nome" required></label>
+          <label class="sr-only">Email<input type="email" name="email" placeholder="seu@email.com" required></label>
+          <label class="sr-only">Mensagem<textarea name="mensagem" placeholder="Como podemos ajudar?" rows="5"></textarea></label>
+
+          <div class="form-actions">
+            <button type="submit" class="btn">Enviar</button>
+            <p id="status" class="status" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 Arquitetura Moderna — Todos os direitos reservados</p>
+      <p class="small">Antes de subir ao GitHub, renomeie o repositório para <code>RIDXXXXX_Desafio01</code> substituindo pelo seu RID.</p>
+    </div>
+  </footer>
+
+  <!-- ======================= MODAL LEAD ======================= -->
+  <div id="leadModal" class="modal">
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
+
+      <h2>Solicitar Contato</h2>
+
+      <!-- FORMULÁRIO FINAL E CORRETO -->
+      <form id="formLead" action="https://api.sheetmonkey.io/form/dJagxSMfCmYi455Q8vMrLM" method="post">
+
+        <label>Nome:
+          <input type="text" name="Nome" placeholder="Seu nome" required />
+        </label>
+
+        <label>Telefone:
+          <input type="tel" name="Telefone" placeholder="Seu telefone" required />
+        </label>
+
+        <input type="hidden" name="Created" value="x-sheetmonkey-current-date-time" />
+
+        <button type="submit" class="btn">Enviar</button>
+
+        <p id="statusLead" class="status"></p>
+      </form>
+
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
